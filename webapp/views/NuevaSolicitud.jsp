@@ -27,14 +27,15 @@
         <img src="<%=context%>/assets/img/image_750x_5e93e4dd3fa46.jpg" class="derecha" alt = "No Encontrado">
         <h1>ASCOVE</h1>
         <h2>Atención de Solicitudes de Comités Vecinales</h2>
-        <h4>Gestión de Solicitudes de Comités</h4>
+        <br>
+        <h4>-Generar Solicitud-</h4>
     </div>
 </form>
 <form class="alinear texto">
-    <h5 class="text-primary-light font-weight-bold">Selecciona el tipo de solicitud que quieres realizar</h5>
     <div class="margen3">
+        <h5 class="text-primary-light font-weight-bold">Selecciona el tipo de servicio que necesitas</h5>
         <select>
-            <option value="" disabled="" selected="selected">Seleccione el tipo de solicitud</option>
+            <option value="" disabled="" selected="selected">Servicios</option>
             <option label="Agua potable y servicios hidráulicos" value="object:17">Agua potable y servicios hidráulicos</option>
             <option label="Asistencia social" value="object:20">Asistencia social</option>
             <option label="Construcciones y obras" value="object:21">Construcciones y obras</option>
@@ -53,9 +54,9 @@
     <div>
         <div class="margen3">
             <h5 class="text-primary-light font-weight-bold">Ubicación</h5>
-            <label >Número</label>
-            <input restrict="reject" limit="5" id="numero" name="codigo-postal" ng-change="buscaColoniasSolicitantes(folio.codigo_postal_solicitante)" maxlength="5">
             <label >Calle</label>
+            <input restrict="reject" limit="5" id="numero" name="codigo-postal" ng-change="buscaColoniasSolicitantes(folio.codigo_postal_solicitante)" maxlength="5">
+            <label >Número</label>
             <input restrict="reject" limit="15" id="calle" name="codigo-postal" ng-change="buscaColoniasSolicitantes(folio.codigo_postal_solicitante)" maxlength="9">
         </div>
     </div>
@@ -63,16 +64,15 @@
         <p text-muted text-gray-900 class="texto" >Referencias del lugar donde se solicita el servicio:</p>
         <textarea class="alinear5 margen3 texto2" maxlength="1000"  id="referencia_solicitud"></textarea>
     </div>
-    <div class="alinear texto2">
-        <h5 class="text-primary-light font-weight-bold">Datos del solicitante</h5>
-        <table class="table table3">
+    <div class="alinear margen6 texto2 table3">
+        <h5 class="text-primary-light font-weight-bold margen3">Datos del solicitante</h5>
+        <table class="table margen3">
             <thead class="table-dark">
             <tr>
                 <th># Comité</th>
                 <th>Colonia</th>
-                <th>Presidente</th>
+                <th>Nombre Completo</th>
                 <th>Teléfono</th>
-                <th>Acción</th>
             </tr>
             </thead>
             <tbody>
@@ -83,37 +83,19 @@
                     <td>${ game.date_premiere }</td>
                     <td>${ game.imgGame }</td>
                     <td>${ game.idGame.nameCategory}</td>
-                    <td>
-                        <c:if test="${ game.status == 1 }">
-                            <span class="badge rounded-pill bg-success">Activo</span>
-                        </c:if>
-                        <c:if test="${ game.status == 0 }">
-                            <span class="badge rounded-pill bg-danger">Inactivo</span>
-                        </c:if>
-                    </td>
-                    <td>
-                        <c:if test="${ game.status == 1 }">
-                            <form action="${context}/getGame" method="POST" style="display: inline;">
-                                <input type="hidden" name="action" value="getUserById">
-                                <input type="hidden" name="id" value="${ game.idGame }">
-                                <button type="submit" class="btn btn-outline-primary"><i class="fas fa-edit"></i> Modificar</button>
-                            </form>
-                            <button id="btn-delete-${ status.count }" dat-code="${ game.idGame }" data-text="${ game.idGame.name }" type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#delete"><i class="fas fa-trash"></i> Eliminar</button>
-                        </c:if>
-                        <c:if test="${ game.status == 0 }">
-                            <button id="btn-details-${ status.count }" data-code="${ game.idGame }" type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#details"><i class="fas fa-info-circle"></i> Detalles</button>
-                        </c:if>
-                    </td>
                 </tr>
             </c:forEach>
             </tbody>
         </table>
     </div>
-    <div class="margen6 alinear">
-        <div class="col-11 col-md-9 col-lg-8 mb-4 mt-4">
+    <div >
+        <div class="col-13 col-md-9 col-lg-8 mb-4 mt-4 margen6 alinear4">
             <label>Imagen:</label>
             <input class="form-control" type="file" name="imgGame" />
         </div>
+    </div>
+    <div class="margen7">
+        <button type="button" class="btn boton" ng-click="createFolio()">Enviar solicitud</button>
     </div>
 </form>
 

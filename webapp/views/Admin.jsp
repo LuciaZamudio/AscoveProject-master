@@ -27,9 +27,10 @@
         <img src="<%=context%>/assets/img/image_750x_5e93e4dd3fa46.jpg" class="derecha" alt = "No Encontrado">
         <h1>ASCOVE</h1>
         <h2>Atención de Solicitudes de Comités Vecinales</h2>
-        <h4>Gestión de Administradores</h4>
+        <br>
+        <h4>-Gestión de Administradores-</h4>
     </div>
-    <div class="alinear">
+    <div class="alinear margen3">
         <a type="button" class="btn boton" data-bs-toggle="modal" data-bs-target="#register"> Agregar Administrador</a>
         <input  restrict="reject" class="ng-pristine ng-untouched ng-valid ng-empty" id="numEnlace" placeholder="# Administrador">
         <button class="btn boton" type="button">Buscar</button>
@@ -85,7 +86,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Agregar Enlace</h5>
+                <h5 class="modal-title">Agregar Administrador</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" action="${context}/createGame">

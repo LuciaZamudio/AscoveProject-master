@@ -27,10 +27,11 @@
         <img src="<%=context%>/assets/img/image_750x_5e93e4dd3fa46.jpg" class="derecha" alt = "No Encontrado">
         <h1>ASCOVE</h1>
         <h2>Atención de Solicitudes de Comités Vecinales</h2>
-        <h4>Gestión de Solicitudes de Comités</h4>
+        <br>
+        <h4>-Gestión de Solicitudes de Comités-</h4>
     </div>
-    <div class="alinear">
-        <a type="button" class="btn boton" href="<%=context%>/views/CrearSolicitud.jsp"></i>Nueva solicitud</a>
+    <div class="alinear margen3">
+        <a type="button" class="btn boton" href="<%=context%>/views/NuevaSolicitud.jsp"></i>Nueva solicitud</a>
         <input  restrict="reject" class="ng-pristine ng-untouched ng-valid ng-empty" id="numSolicitud" placeholder="# Solicitud">
         <button class="btn boton" type="button">Buscar</button>
     </div>

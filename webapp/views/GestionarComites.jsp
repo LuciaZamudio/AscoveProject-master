@@ -28,10 +28,11 @@
         <img src="<%=context%>/assets/img/image_750x_5e93e4dd3fa46.jpg" class="derecha" alt = "No Encontrado">
         <h1>ASCOVE</h1>
         <h2>Atención de Solicitudes de Comités Vecinales</h2>
-        <h4>Gestión de Comités</h4>
+        <br>
+        <h4>-Gestión de Comités-</h4>
     </div>
-    <div class="alinear">
-        <a type="button" class="btn boton" data-bs-toggle="modal" data-bs-target="#register"> Nuevo comité</a>
+    <div class="alinear margen3">
+        <a type="button" class="btn boton" data-bs-toggle="modal" data-bs-target="#register"> Agregar comité</a>
         <input  restrict="reject" class="ng-pristine ng-untouched ng-valid ng-empty" id="numEnlace" placeholder="# Enlace">
         <button class="btn boton" type="button">Buscar</button>
     </div>

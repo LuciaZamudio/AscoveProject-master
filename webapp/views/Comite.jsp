@@ -27,9 +27,10 @@
     <img src="<%=context%>/assets/img/image_750x_5e93e4dd3fa46.jpg" class="derecha" alt = "No Encontrado">
     <h1>ASCOVE</h1>
     <h2>Atención de Solicitudes de Comités Vecinales</h2>
-    <h4>Comité</h4>
+    <br>
+    <h4>-Comité-</h4>
   </div>
-  <div class="alinear">
+  <div class="alinear margen3">
     <a href="<%=context%>/views/GestionarSolicitudesComite.jsp"><button class="btn boton" type="button">Gestión de solicitudes</button></a>
     <a href="<%=context%>/views/index.jsp"><button class="btn boton margen5" type="button">Cerrar sesión</button></a>
   </div>

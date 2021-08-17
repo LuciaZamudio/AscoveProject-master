@@ -28,11 +28,11 @@
         <img src="<%=context%>/assets/img/image_750x_5e93e4dd3fa46.jpg" class="derecha" alt = "No Encontrado">
         <h1>ASCOVE</h1>
         <h2>Atención de Solicitudes de Comités Vecinales</h2>
-        <h4>Gestión de Solicitudes de Comités</h4>
+        <br>
+        <h4>-Gestión de Solicitudes de Comités-</h4>
     </div>
-    <div class="alinear">
-        <label class="text-muted text-gray-900">Folio solicitud</label>
-        <input restrict="reject" class="ng-pristine ng-untouched ng-valid ng-empty" id="folio" placeholder="Folio">
+    <div class="alinear margen3">
+        <input restrict="reject" class="ng-pristine ng-untouched ng-valid ng-empty" id="folio" placeholder="# Solicitud">
         <button class="btn boton" type="button">Buscar</button>
     </div>
 
